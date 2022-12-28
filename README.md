@@ -16,3 +16,7 @@ The following techniques have been used:
 
 ## To excute the script
 python < nonstandardcode.py >
+
+Command to activate environment conda activate mle-dev
+
+command to create env.yml file conda env create -f env.yml

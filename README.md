@@ -20,3 +20,13 @@ python < nonstandardcode.py >
 Command to activate environment conda activate mle-dev
 
 command to create env.yml file conda env create -f env.yml
+
+### Installions
+pip install black 
+pip install isort
+pip install flake8
+
+### Fixing errors and formatting code
+black nonstandardcode.py 
+isort nonstandardcode.py
+flake8 --max-linelength 88 nonstandardcode.py

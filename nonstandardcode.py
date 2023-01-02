@@ -1,22 +1,19 @@
 import locale
-import sys
 import os
 import tarfile
+
 import numpy as np
 import pandas as pd
-from six.moves import urllib
-from sklearn.model_selection import StratifiedShuffleSplit
+import six
 from scipy.stats import randint
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import RandomizedSearchCV
-from sklearn.model_selection import GridSearchCV
 from sklearn.impute import SimpleImputer
-from sklearn.metrics import mean_absolute_error
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.metrics import mean_squared_error
 from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
-sys.path.insert("..", 0)
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+from sklearn.model_selection import (GridSearchCV, RandomizedSearchCV,
+                                     StratifiedShuffleSplit, train_test_split)
+from sklearn.tree import DecisionTreeRegressor
+
 locale.setlocale(locale.LC_ALL, "en_US.UTF-8")
 
 
@@ -28,7 +25,7 @@ HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
 def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
     os.makedirs(housing_path, exist_ok=True)
     tgz_path = os.path.join(housing_path, "housing.tgz")
-    urllib.request.urlretrieve(housing_url, tgz_path)
+    six.moves.urllib.request.urlretrieve(housing_url, tgz_path)
     housing_tgz = tarfile.open(tgz_path)
     housing_tgz.extractall(path=housing_path)
     housing_tgz.close()
@@ -126,11 +123,9 @@ lin_reg.fit(housing_prepared, housing_labels)
 housing_predictions = lin_reg.predict(housing_prepared)
 lin_mse = mean_squared_error(housing_labels, housing_predictions)
 lin_rmse = np.sqrt(lin_mse)
-lin_rmse
 
 
 lin_mae = mean_absolute_error(housing_labels, housing_predictions)
-lin_mae
 
 
 tree_reg = DecisionTreeRegressor(random_state=42)
@@ -139,7 +134,6 @@ tree_reg.fit(housing_prepared, housing_labels)
 housing_predictions = tree_reg.predict(housing_prepared)
 tree_mse = mean_squared_error(housing_labels, housing_predictions)
 tree_rmse = np.sqrt(tree_mse)
-tree_rmse
 
 
 param_distribs = {

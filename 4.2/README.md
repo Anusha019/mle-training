@@ -22,17 +22,17 @@ Command to activate environment conda activate mle-dev
 
 command to create env.yml file conda env create -f env.yml
 
-### Installions
+# Installions
 pip install black
 pip install isort
 pip install flake8
 
-### Fixing errors and formatting code
+# Fixing errors and formatting code
 black nonstandardcode.py
 isort nonstandardcode.py
 flake8 --max-linelength 88 nonstandardcode.py
 =======
-## To excute the script
+# To excute the script
 This code has python files refactored as scripts and are able to install as a package.
 All the python scripts are available at `src/housing_price`.
 This folder contains `datasets` which has the required datsets along with train and test datasets as csv files.
@@ -67,10 +67,10 @@ create Dockerfile and build container ==> docker build -t image name
 to run the image
 docker run imagename
 
-##push docker image
+#push docker image
 docker tag imagename YOUR_DOCKERHUB_NAME/imagename
 docker push YOUR_DOCKERHUB_NAME/imagename
 
-##pulling
+#pulling
 
 docker pull YOUR_DOCKERHUB_NAME/imagename

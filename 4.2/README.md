@@ -9,13 +9,13 @@ The following techniques have been used:
  - Decision Tree
  - Random Forest
 
-## Steps performed
+# Steps performed
  - We prepare and clean the data. We check and impute for missing values.
  - Features are generated and the variables are checked for correlation.
  - Multiple sampling techinuqies are evaluated. The data set is split into train and test.
  - All the above said modelling techniques are tried and evaluated. The final metric used to evaluate is mean squared error.
 
-## To excute the script
+# To excute the script
 python < nonstandardcode.py >
 
 Command to activate environment conda activate mle-dev
@@ -60,14 +60,13 @@ First initialize the mlflow by running <mlflow ui> in terminal
 2)To run python script  run python < scriptname.py >
 3) results will get displayed in the terminal and all the metrics,parameters,artifacts gets logged into mlflow
 
-
-# to build docker container
+# Build docker container
 create Dockerfile and build container ==> docker build -t image name
 
 to run the image
 docker run imagename
 
-#push docker image
+# push docker image
 docker tag imagename YOUR_DOCKERHUB_NAME/imagename
 docker push YOUR_DOCKERHUB_NAME/imagename
 

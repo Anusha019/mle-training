@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/582372594054211174/8cc45d62df934695875f0ac8172b6b64/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '582372594054211174'
+lifecycle_stage: active
+run_id: 8cc45d62df934695875f0ac8172b6b64
+run_name: CHILD_RUN_2
+run_uuid: 8cc45d62df934695875f0ac8172b6b64
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675664937593
+status: 1
+tags: []
+user_id: anusha.polaki

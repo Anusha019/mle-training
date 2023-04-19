@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9fe8ef43164f420fa11895dea27839ec/artifacts
+end_time: 1675663950416
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9fe8ef43164f420fa11895dea27839ec
+run_name: House Price Prediction
+run_uuid: 9fe8ef43164f420fa11895dea27839ec
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675663950307
+status: 4
+tags: []
+user_id: anusha.polaki
